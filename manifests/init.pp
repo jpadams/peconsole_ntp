@@ -36,10 +36,8 @@ class peconsole_ntp(
     include ::ntp
   # otherwise validate, normalize, and pass our array of servers
   } else {
-    # strip any whitespace from array elements to normalize
-    $normal_servers_array = strip($servers_array)
-    # deduplicate array entries including empty entries
-    $final_servers_array = delete(unique($normal_servers_array), '')
+    # remove whitespace & deduplicate array entries including empty entries
+    $final_servers_array = delete(unique(strip($servers_array)), '')
     # make sure we ended up with a valid array
     validate_array($final_servers_array)
     #pass the array of ntp servers to ntp
