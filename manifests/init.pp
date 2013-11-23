@@ -8,9 +8,10 @@
 # Support for arrays, hashes, booleans has been completed and will be
 # in PE 3.2 (likely Q1 2014), but this can serve as a stopgap in PE 3.0, 3.1.
 #
-# This was designed for the following ntp module:
-# name    'puppetlabs-ntp'
-# version '1.0.1'
+# This was designed for the following ntp module on the forge:
+# name      'puppetlabs-ntp'
+# forge-url 'http://forge.puppetlabs.com/puppetlabs/ntp'
+
 
 class peconsole_ntp(
   # we want to be able to define the server list in the PE console
