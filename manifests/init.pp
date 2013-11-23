@@ -31,7 +31,7 @@ class peconsole_ntp(
   } else {
     fail('only array or string values are acceptable for servers parameter')
   }
-  # if no valid server list, defer to defaults in ntp
+  # if no valid server list, defer to defaults in ntp module
   if $servers_array == undef {
     include ::ntp
   # otherwise validate, normalize, and pass our array of servers
