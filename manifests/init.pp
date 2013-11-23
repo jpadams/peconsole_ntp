@@ -20,8 +20,8 @@ class peconsole_ntp(
   # to future-proof this module for when PE Console supports array params
   if is_array($servers) {
     $servers_array = $servers
-  # to work around lack of array param support by accepting a
-  # comma-separated string of servers
+  # work around lack of array param support in console by accepting a
+  # comma-separated string of ntp servers
   } elsif is_string($servers) {
     if strip($servers) == '' {
       $servers_array = undef
